@@ -1,0 +1,12 @@
+**/.vs
+**/.vscode
+**/Debug
+**/Release
+**/x64
+**/x84
+**/_build
+**/ignore
+*.exe
+*.vcxproj
+*.filters
+*.user
