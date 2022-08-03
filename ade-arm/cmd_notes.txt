@@ -1,0 +1,2 @@
+COMPILA arm-gcc -static -ggdb -o OUTPUT INPUT.S <LIB>
+ESEGUI  arm-gdbgui OUTPUT
