@@ -1,0 +1,34 @@
+Consegna:
+1.	Scegliete una fonte affidabile di informazioni su STL1 e cercate la sezione sugli algoritmi.
+	Scrivete su un file di testo un elenco di almeno 10 algoritmi con una breve descrizione perciascuno di essi.
+2.	Cercate quale sia il modo migliore per concatenare due std::vector.
+
+1:
+
+1- TYPE accumulate( iterator start, iterator end, TYPE val )
+	Somma tutti i valori da start fino ad end e ritorna il risultato (val è solamente un valore per ottenere il tipo es: 0 = int, 0.0 = double)
+2- size_t count_if( iterator start, iterator end, UnaryPred p )
+	Confronta tutti i valori da start fino ad end utilizzando p come funzione per effetuare il confronto
+3- bool binary_search( iterator start, iterator end, const TYPE& val )
+	Effettua la ricerca binaria tra start e end, cercando val
+4- iterator copy( iterator start, iterator end, iterator dest );
+	Copia tutti i valori tra start e end partendo da dest, restituisce un iteratore che punta all'elemento finale
+5- bool equal( iterator start1, iterator end1, iterator start2 )
+	Confronta due iteratori di due oggetti diversi e restituisce true se contengono gli stessi elementi
+6- void fill( iterator start, iterator end, const TYPE& val );
+	Assegna val a tutti gli elementi da start a end
+7- iterator fill_n( iterator start, size_t n, const TYPE& val );
+	Assegna val a tutti gli elementi da start fino a start + val
+8- iterator find( iterator start, iterator end, const TYPE& val );
+	Cerca val tra start e end, se lo trova ritorna un iterator che punta al valore altrimenti end
+9- iterator find_if( iterator start, iterator end, UnPred up );
+	Cerca il primo elemento tra start e end che fa restituire "true" dalla funzione up
+10- UnaryFunction for_each( iterator start, iterator end, UnaryFunction f)
+	Invoca la funzione f su ogni elemento tra start e end
+
+2:
+
+vTOT.reserve( V1.size() + V2.size() ); // Pre alloca la memoria cosi insert O(1)
+
+vTOT.insert( vTOT.end(), V1.begin(), V1.end() );
+vTOT.insert( vTOT.end(), V2.begin(), V2.end() );
